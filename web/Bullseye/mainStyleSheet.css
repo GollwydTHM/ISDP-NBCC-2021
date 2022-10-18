@@ -1,0 +1,55 @@
+table, td, th {
+    border: solid 2px black;
+    border-collapse: collapse;
+}
+
+button {
+    border: solid 2px black;
+    color: white;
+    background-color: #26AB69;
+    padding: 5px;
+    margin: 2px;
+}
+
+button:disabled{
+    background-color: grey;
+}
+
+td, th {
+    padding: 10px;
+}
+
+th {
+    background-color: #566665;
+    color: white;
+    font-weight: bold;
+}
+
+#OrderDIV {
+    background-color: yellow;
+    width: 250px;
+    padding: 5px;
+}
+
+#OrderSpan {
+    color: red;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.formLabel {
+    width: 100px;
+    float: left;
+}
+
+tr:hover {
+    background-color: #ADC400;
+}
+
+.highlighted {
+    background-color: yellow;
+}

@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{272BCA47-0EDC-4DF8-B8BF-B07293228254}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ISDP_AlexanderK</RootNamespace>
+    <AssemblyName>ISDP-AlexanderK</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.23\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="db\Cryptography.cs" />
+    <Compile Include="db\DBConnection.cs" />
+    <Compile Include="db\SQLCommands.cs" />
+    <Compile Include="entity\Audit.cs" />
+    <Compile Include="entity\Location.cs" />
+    <Compile Include="entity\Supplier.cs" />
+    <Compile Include="entity\User.cs" />
+    <Compile Include="forms\AttachedOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\AttachedOrderForm.Designer.cs">
+      <DependentUpon>AttachedOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\CreateMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\CreateMessageForm.Designer.cs">
+      <DependentUpon>CreateMessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\DeliveryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\DeliveryForm.Designer.cs">
+      <DependentUpon>DeliveryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\InventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\InventoryForm.Designer.cs">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\LocationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\LocationsForm.Designer.cs">
+      <DependentUpon>LocationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\LossReturnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\LossReturnForm.Designer.cs">
+      <DependentUpon>LossReturnForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\LossReturnViewList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\LossReturnViewList.Designer.cs">
+      <DependentUpon>LossReturnViewList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\MainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\MessageForm.Designer.cs">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\ModifyRecordsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\ModifyRecordsForm.Designer.cs">
+      <DependentUpon>ModifyRecordsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\OrderListMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\OrderListMessageForm.Designer.cs">
+      <DependentUpon>OrderListMessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\OrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\OrdersForm.Designer.cs">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entity\VehicleType.cs" />
+    <Compile Include="forms\ProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\ProductForm.Designer.cs">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\StoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\StoreForm.Designer.cs">
+      <DependentUpon>StoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\SupplierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\SupplierForm.Designer.cs">
+      <DependentUpon>SupplierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\UserListMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\UserListMessageForm.Designer.cs">
+      <DependentUpon>UserListMessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="forms\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="forms\AttachedOrderForm.resx">
+      <DependentUpon>AttachedOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\CreateMessageForm.resx">
+      <DependentUpon>CreateMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\DeliveryForm.resx">
+      <DependentUpon>DeliveryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\InventoryForm.resx">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\LocationsForm.resx">
+      <DependentUpon>LocationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\LossReturnForm.resx">
+      <DependentUpon>LossReturnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\LossReturnViewList.resx">
+      <DependentUpon>LossReturnViewList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\ModifyRecordsForm.resx">
+      <DependentUpon>ModifyRecordsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\OrderListMessageForm.resx">
+      <DependentUpon>OrderListMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\OrdersForm.resx">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\StoreForm.resx">
+      <DependentUpon>StoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\SupplierForm.resx">
+      <DependentUpon>SupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\UserListMessageForm.resx">
+      <DependentUpon>UserListMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="forms\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

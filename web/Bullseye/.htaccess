@@ -1,0 +1,10 @@
+RewriteEngine on
+
+RewriteRule ^StoreTableAPI/items$ api/StoreTableAPI.php [NC]
+RewriteRule ^StoreTableAPI/items/(locations)$ api/StoreTableAPI.php?locations=$1 [NC]
+RewriteRule ^StoreTableAPI/items/(categories)$ api/StoreTableAPI.php?categories=$1 [NC]
+RewriteRule ^StoreTableAPI/items/([A-Z]{4})/(\S+)$ api/StoreTableAPI.php?locationID=$1&categoryID=$2 [NC]
+
+RewriteRule ^StoreTableAPI/txn/([0-9]{6})$ api/StoreTableAPI.php?orderID=$1 [NC]
+
+
